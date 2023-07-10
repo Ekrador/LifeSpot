@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -26,7 +27,13 @@ public static class EndpointMapper
 
     public static void MapJs(this IEndpointRouteBuilder builder)
     {
-        var jsFiles = new[] { "index.js", "testing.js", "about.js" };
+        var jsPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "JS");
+        var jsFilesPath = Directory.GetFiles(jsPath);
+        var jsFiles = new List<string>();
+        foreach(var file in jsFilesPath)
+        {
+            jsFiles.Add(Path.GetFileName(file));
+        }
 
         foreach (var fileName in jsFiles)
         {

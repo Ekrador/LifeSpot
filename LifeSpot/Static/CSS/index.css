@@ -101,15 +101,15 @@ label {
     display: inline-block;
 }
 
-#slider p {
-    display: block;
+#slider img {
+    display: none;
     width: 100%;
     height: auto;
 }
 
 #slider button {
     position: absolute;
-    top: 15%;
+    top: 45%;
     width: 40px;
     height: 40px;
     border-radius: 50%;
