@@ -18,6 +18,7 @@ header {
     padding-left: 1%;
     padding-top: 1.2%;
 }
+
 #header-index {
     color: #020692;
 }
@@ -27,7 +28,7 @@ header, footer, body, .video-container {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     font-size: medium;
     color: dimgrey;
@@ -38,7 +39,8 @@ footer {
 aside {
     height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
-    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    min-width: 150px;
+    position: fixed; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
     z-index: 1; /* Сайд-бар будет поверх остальных элементов */
     top: 0; /* Сайдбар будет в самой верхней части страницы */
     left: 0;
@@ -54,11 +56,12 @@ body {
 
 .navbar p {
     color: darkgray;
-    padding-left: 15%;
 }
+
 a {
     text-decoration: none;
 }
+
 .navbar p:hover {
     color: aliceblue;
 }
@@ -67,12 +70,12 @@ label {
     display: block;
 }
 
-.search{
+.search {
     margin-left: 1%;
 }
-#searchtxt:focus
-{
-    background-color:lightblue;
+
+#searchtxt:focus {
+    background-color: lightblue;
 }
 
 .review-button {
@@ -81,12 +84,41 @@ label {
     padding-left: 1%;
     padding-top: 1%;
 }
+
 .review-text {
     display: block;
     margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
 }
-#review-btn:hover{
+
+#review-btn:hover {
     background-color: cornflowerblue;
+}
+
+#slider {
+    position: relative;
+    display: inline-block;
+}
+
+#slider p {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#slider button {
+    position: absolute;
+    top: 15%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#slider #slideLeft {
+    left: 5px;
+}
+
+#slider #slideRight {
+    right: 5px;
 }
